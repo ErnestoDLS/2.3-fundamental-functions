@@ -105,6 +105,16 @@ console.assert(isVowel("E") === true);
 
 function rovarspraket(text){
     // YOUR CODE HERE
+    var concat = ""
+    for (var i = 0; i < text.length; i++) {
+    if (text[i] != "a" && text[i] != "e" && text[i] != "i" && text[i] != "o" && text[i] != "u") {
+      concat += text[i] + "o" text[i]
+
+    }
+    else {
+      return concat += text [i]
+    }
+    }
 }
 
 console.assert(rovarspraket("a") === "a")
