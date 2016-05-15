@@ -29,7 +29,7 @@ function doSomethingCool() {
 
 // Put your answer below -------------------------
  var somethingCool = function doSomethingCool()
- return var somethingCool()
+ return var somethingCool
 
 // -----------------------------------------------
 
@@ -79,6 +79,10 @@ letter = "z";
 console.log("The letter is", letter);
 
 // Put your answer below -------------------------
+// var letter 'x' is a global variable
+// letter 'y' overrides the global var but is a perameter
+// so there for letter 'z' will be the first to be
+// executed and then it wil be 'y'
 
 
 // -----------------------------------------------
@@ -102,6 +106,11 @@ var reverseStr = function(str) {
 
 // Put your answer below -------------------------
 
+var reverseStr = function(str) {
+  return str.split("").reverse().join("");
+};
+
+reverseStr("hello")
 
 // -----------------------------------------------
 
@@ -160,7 +169,8 @@ console.log(spanishColor("Negro"));
 var foo = "bar";
 
 // Put your answer below -------------------------
-
+var foo;
+foo = "bar";
 
 // -----------------------------------------------
 
@@ -182,7 +192,12 @@ var callTenTimes = function(callback) {
 };
 
 // Put your answer below -------------------------
-
+var callNtimes = function(num,callback) {
+  for(var i= 0; i < num; i ++) {
+    console.log(callback)
+  }
+};
+callNtimes(num,callback);
 
 // -----------------------------------------------
 
@@ -256,6 +271,21 @@ var accelerate = function(amount) {
 };
 
 // Put your answer below -------------------------
+// The reason it was returning NaN is because the amount
+// is undefined and when add speed plus amount
+// it will return Nan
+
+var speed = 0;
+
+var accelerate = function(amount) {
+  if(amount === 0) {
+    speed +=1;
+  }
+  else{
+    speed += amount;
+  }
+};
+accelerate();
 
 
 // -----------------------------------------------
